@@ -2,6 +2,11 @@
  * Basic typography style for copy text
  */
 body {
-  color: $text-color;
+  color: $main-text-color;
   font: normal 125% / 1.4 $text-font-stack;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
 }
