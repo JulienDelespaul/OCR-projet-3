@@ -3,12 +3,24 @@
 // -----------------------------------------------------------------------------
 
 footer {
-  background: #353535;
-  color: $secondary-text-color;
-  font-size: 1rem;
-  padding: 0 30px;
-  h1 {
-    padding: 20px 0;
-    font-size: 1.25rem;
-  }
+	background: #353535;
+	color: $secondary-text-color;
+	height: 196px;
+	font-size: 1rem;
+	padding: 0 30px;
+	h1 {
+		padding: 20px 0;
+		font-size: 1.25rem;
+	}
+	.footer__icon-and-text {
+		display: grid;
+		grid-template-columns: 1fr 12fr;
+	}
+	h4,
+	p {
+		padding-bottom: 6px;
+	}
+	p {
+		font-weight: 200;
+	}
 }

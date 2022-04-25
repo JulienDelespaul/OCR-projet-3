@@ -1,146 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
         initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&family=Shrikhand&display=swap"
-            rel="stylesheet">
-        <script src="https://kit.fontawesome.com/ec56364b1f.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="dist/main.css">
-        <title>Ohmyfood</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec56364b1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/main.css">
+    <title>Ohmyfood</title>
+</head>
 
-    <body>
-        <header>
-            <div class="header__logo">
-                <h1>Ohmyfood</h1>
-            </div>
-        </header>
+<body>
+    <header>
+        <div class="header__logo">
+            <h1>Ohmyfood</h1>
+        </div>
+    </header>
 
-        <main>
-            <!-- search-form -->
-            <div class="search-form">
-                <div class="search-form__location-icon"><i class="fa-solid fa-xs fa-location-dot"></i></div>
-                <form class="search-form__input" role="search" action="search.php" method="get">
-                    <input type="text" name="search" placeholder="Paris, Belleville">
-                </form>
-            </div>
+    <main>
+        <!-- search-form -->
+        <div class="search-form">
+            <div class="search-form__location-icon"><i class="fa-solid fa-xs fa-location-dot"></i></div>
+            <form class="search-form__input" role="search" action="search.php" method="get">
+                <input type="text" name="search" placeholder="Paris, Belleville">
+            </form>
+        </div>
 
-            <!-- explore -->
-            <div class="explore">
-                <h3 class="explore__title">Réservez le menu qui vous convient</h3>
-                <p class="explore__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <div class="explore__button">Explorez nos restaurants</div>
-            </div>
+        <!-- explore -->
+        <div class="explore">
+            <h3 class="explore__title">Réservez le menu qui vous convient</h3>
+            <p class="explore__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <div class="button--flashy">Explorez nos restaurants</div>
+        </div>
 
-            <!-- explanation -->
-            <div class="explanation">
-                <h3 class="explanation__title">Fonctionnement</h3>
-                <div class="explanation__button">
-                    <!-- en after ?-->
-                    <div class="explanation__button--number">1</div>
-                    <div class="container">
-                        <!-- placeholder, changer icone -->
-                        <div class="explanation__button--icon"><i class="fa-solid fa-xs fa-location-dot"></i></div>
-                        <div class="explanation__button__text">Choisissez un restaurant</div>
-                    </div>
-                </div>
-
-                <div class="explanation__button">
-                    <!-- en after ?-->
-                    <div class="explanation__button--number">1</div>
-                    <div class="container">
-                        <!-- placeholder, changer icone -->
-                        <div class="explanation__button--icon"><i class="fa-solid fa-xs fa-location-dot"></i></div>
-                        <div class="explanation__button__text">Composez votre menu</div>
-                    </div>
-                </div>
-
-                <div class="explanation__button">
-                    <!-- en after ?-->
-                    <div class="explanation__button--number">1</div>
-                    <div class="container">
-                        <!-- placeholder, changer icone -->
-                        <div class="explanation__button--icon"><i class="fa-solid fa-xs fa-location-dot"></i></div>
-                        <div class="explanation__button__text">Dégustez au restaurant</div>
-                    </div>
-                </div>
-            </div>
-            <!-- restaurants -->
-            <div class="restaurant">
-                <h3 class="restaurant__title">Restaurants</h3>
-                <div class="restaurant__card">
-                    <div class="restaurant__card__image">
-                        <img src="images/restaurants/Mobile 750px width/La_palette_du_gout.webp"
-                            alt="La palette du gout">
-                    </div>
-                    <div class="restaurant__card__text-container">
-                        <div class="restaurant__card__text">
-                            <h4>La palette du gout</h4>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div class="restaurant__card__heart"></div>
-                    </div>
-                </div>
-
-                <div class="restaurant__card">
-                    <div class="restaurant__card__image">
-                        <img src="images/restaurants/Mobile 750px width/La_note_enchantee.webp" alt="La note enchantée">
-                    </div>
-                    <div class="restaurant__card__text-container">
-                        <div class="restaurant__card__text">
-                            <h4>La note enchantée</h4>
-                            <p>Charonne</p>
-                        </div>
-                        <div class="restaurant__card__heart"></div>
-                    </div>
-                </div>
-
-                <div class="restaurant__card">
-                    <div class="restaurant__card__image">
-                        <img src="images/restaurants/Mobile 750px width/A_la_francaise.webp" alt="À la française">
-                    </div>
-                    <div class="restaurant__card__text-container">
-                        <div class="restaurant__card__text">
-                            <h4>À la française</h4>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <div class="restaurant__card__heart"></div>
-                    </div>
-                </div>
-
-                <div class="restaurant__card">
-                    <div class="restaurant__card__image">
-                        <img src="images/restaurants/Mobile 750px width/Le_delice_des_sens.webp"
-                            alt="Le délice des sens">
-                    </div>
-                    <div class="restaurant__card__text-container">
-                        <div class="restaurant__card__text">
-                            <h4>Le délice des sens</h4>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <div class="restaurant__card__heart"></div>
-                    </div>
-                </div>
-
+        <!-- explanation -->
+        <div class="explanation">
+            <h3 class="explanation__title">Fonctionnement</h3>
+            <div class="explanation__card">
+                <div class="explanation__card--icon"><i class="fa-solid fa-tablet-screen-button"></i></div>
+                <div class="explanation__card--text">Choisissez un restaurant</div>
             </div>
 
-        </main>
-
-        <footer>
-            <div class="footer__logo">
-                <h1>Ohmyfood</h1>
-                <h4>icone fourchette Proposer un restaurant</h4>
-                <h4>icone poignée de main Devenir partenaire </h4>
-                <p>Mentions légales</p>
-                <p>Contact</p>
+            <div class="explanation__card">
+                <div class="explanation__card--icon"><i class="fa-solid fa-list"></i></div>
+                <div class="explanation__card--text">Composez votre menu</div>
             </div>
-        </footer>
-    </body>
+
+            <div class="explanation__card background-highlight-color">
+                <div class="explanation__card--icon"><i class="fa-solid fa-store"></i></div>
+                <div class="explanation__card--text">Dégustez au restaurant</div>
+            </div>
+        </div>
+        <!-- restaurants -->
+        <div class="restaurant">
+            <h3 class="restaurant__title">Restaurants</h3>
+            <div class="restaurant__card new">
+                <div class="restaurant__card__image">
+                    <img src="images/restaurants/Mobile 750px width/La_palette_du_gout.webp" alt="La palette du gout">
+                </div>
+                <div class="restaurant__card__text-container">
+                    <div class="restaurant__card__text">
+                        <h4>La palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <div class="restaurant__card__heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+            </div>
+
+            <div class="restaurant__card new">
+                <div class="restaurant__card__image">
+                    <img src="images/restaurants/Mobile 750px width/La_note_enchantee.webp" alt="La note enchantée">
+                </div>
+                <div class="restaurant__card__text-container">
+                    <div class="restaurant__card__text">
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="restaurant__card__heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+            </div>
+
+            <div class="restaurant__card">
+                <div class="restaurant__card__image">
+                    <img src="images/restaurants/Mobile 750px width/A_la_francaise.webp" alt="À la française">
+                </div>
+                <div class="restaurant__card__text-container">
+                    <div class="restaurant__card__text">
+                        <h4>À la française</h4>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <div class="restaurant__card__heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+            </div>
+
+            <div class="restaurant__card">
+                <div class="restaurant__card__image">
+                    <img src="images/restaurants/Mobile 750px width/Le_delice_des_sens.webp" alt="Le délice des sens">
+                </div>
+                <div class="restaurant__card__text-container">
+                    <div class="restaurant__card__text">
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="restaurant__card__heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer__logo">
+            <h1>Ohmyfood</h1>
+            <div class="footer__icon-and-text">
+                <i class="fa-solid fa-utensils"></i>
+                <h4>Proposer un restaurant</h4>
+            </div>
+            <div class="footer__icon-and-text">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h4>Devenir partenaire </h4>
+            </div>
+            <p>Mentions légales</p>
+            <p>Contact</p>
+        </div>
+    </footer>
+</body>
 
 </html>
