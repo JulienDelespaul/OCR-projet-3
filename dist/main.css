@@ -781,6 +781,13 @@ footer p {
 .restaurant {
   background-color: #f6f6f6;
   padding: 50px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .restaurant__title {
@@ -869,5 +876,110 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+footer {
+  -webkit-transform: translatey(-40px);
+          transform: translatey(-40px);
+}
+
+.menu__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 264px;
+  width: 100%;
+}
+
+.menu__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  width: 100%;
+  height: 1196px;
+  background-color: #f6f6f6;
+  padding: 36px 20px;
+  border-radius: 40px 40px 0px 0px;
+  -webkit-transform: translatey(-40px);
+          transform: translatey(-40px);
+}
+
+.menu__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.75rem;
+}
+
+.menu__element {
+  padding: 15px 0;
+}
+
+.menu__element--title {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.menu__element--title::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 3px;
+  left: 0px;
+  top: 30px;
+  background-color: #99e2d0;
+}
+
+.menu__element--dish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 68px;
+  padding: 14px 22px 14px 10px;
+  background-color: #fff;
+  margin-bottom: 14px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.menu__element--dish-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.menu__element--dish-ingredients {
+  font-size: 0.9375rem;
+}
+
+.menu__element--dish-price {
+  padding-top: 25px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.menu__element--dish:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */
