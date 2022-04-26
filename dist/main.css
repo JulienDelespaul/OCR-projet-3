@@ -601,6 +601,7 @@ footer {
   background: #353535;
   color: #fff;
   height: 196px;
+  width: 100%;
   font-size: 1rem;
   padding: 0 30px;
 }
@@ -878,7 +879,7 @@ footer p {
           justify-content: center;
 }
 
-header {
+header.restaurants__page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -889,9 +890,8 @@ header {
   padding-right: 100px;
 }
 
-footer {
-  -webkit-transform: translatey(-40px);
-          transform: translatey(-40px);
+main.restaurants__page {
+  height: 1420px;
 }
 
 .menu__image {
@@ -912,11 +912,11 @@ footer {
 .menu {
   width: 100%;
   height: 1196px;
+  position: absolute;
+  top: 284px;
   background-color: #f6f6f6;
   padding: 36px 20px;
   border-radius: 40px 40px 0px 0px;
-  -webkit-transform: translatey(-40px);
-          transform: translatey(-40px);
 }
 
 .menu__banner {
@@ -981,5 +981,18 @@ footer {
 
 .menu__element--dish:last-child {
   margin-bottom: 0;
+}
+
+.menu__order-button {
+  width: 56%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

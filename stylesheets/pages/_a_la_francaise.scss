@@ -1,12 +1,12 @@
-header {
+header.restaurants__page {
 	display: flex;
 	justify-content: space-between;
 	padding-left: 20px;
 	padding-right: 100px;
 }
 
-footer {
-	transform: translatey(-40px);
+main.restaurants__page {
+	height: 1420px;
 }
 
 .menu__image {
@@ -23,10 +23,12 @@ footer {
 .menu {
 	width: 100%;
 	height: 1196px;
+	position: absolute;
+	top: 284px;
 	background-color: #f6f6f6;
 	padding: 36px 20px;
 	border-radius: 40px 40px 0px 0px;
-	transform: translatey(-40px);
+
 	&__banner {
 		display: flex;
 		justify-content: space-between;
@@ -72,5 +74,9 @@ footer {
 		&--dish:last-child {
 			margin-bottom: 0;
 		}
+	}
+	&__order-button {
+		width: 56%;
+		@include center-content;
 	}
 }
