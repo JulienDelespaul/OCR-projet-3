@@ -498,7 +498,6 @@ a {
 
 a:hover, a:active, a:focus {
   color: #000;
-  text-decoration: underline;
 }
 
 h1 {
@@ -639,6 +638,15 @@ footer p {
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
   border-radius: 999px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.button--flashy:hover {
+  background: linear-gradient(324.73deg, #8d3cb6 7.15%, #c94fb4 108.11%);
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .search-form {
@@ -804,6 +812,14 @@ footer p {
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   position: relative;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.restaurant__card:hover {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .restaurant__card__image {
@@ -855,9 +871,32 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-top: 4px;
+  position: relative;
 }
 
-.restaurant__card.new::after {
+.restaurant .heart-hollow {
+  opacity: 1;
+  z-index: 1;
+}
+
+.restaurant .heart-hollow:hover + .heart-full {
+  background-position: left;
+}
+
+.heart-full {
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(51%, #8d3cb6), color-stop(108.11%, #ffd7f4)) right;
+  background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
+  background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.heart-full.new::after {
   position: absolute;
   width: 80px;
   height: 30px;
