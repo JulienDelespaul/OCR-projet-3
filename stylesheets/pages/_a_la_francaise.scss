@@ -1,82 +1,97 @@
 header.restaurants__page {
-	display: flex;
-	justify-content: space-between;
-	padding-left: 20px;
-	padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 100px;
 }
 
 main.restaurants__page {
-	height: 1420px;
+  height: 1420px;
 }
 
 .menu__image {
-	display: flex;
-	height: 264px;
-	width: 100%;
-	img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
+  display: flex;
+  height: 264px;
+  width: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .menu {
-	width: 100%;
-	height: 1196px;
-	position: absolute;
-	top: 284px;
-	background-color: #f6f6f6;
-	padding: 36px 20px;
-	border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  height: 1196px;
+  position: absolute;
+  top: 284px;
+  background-color: #f6f6f6;
+  padding: 36px 20px;
+  border-radius: 40px 40px 0px 0px;
 
-	&__banner {
-		display: flex;
-		justify-content: space-between;
-		font-size: 1.75rem;
-	}
-	&__element {
-		padding: 15px 0;
-		&--title {
-			padding-bottom: 20px;
-			position: relative;
-			&::after {
-				position: absolute;
-				content: "";
-				width: 40px;
-				height: 3px;
-				left: 0px;
-				top: 30px;
-				background-color: #99e2d0;
-			}
-		}
-		&--dish {
-			display: flex;
-			justify-content: space-between;
-			height: 68px;
-			padding: 14px 22px 14px 10px;
-			background-color: #fff;
-			margin-bottom: 14px;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-			border-radius: 20px;
-			&-name {
-				font-weight: 700;
-				font-size: 1.125rem;
-			}
-			&-ingredients {
-				font-size: 0.9375rem;
-			}
-			&-price {
-				padding-top: 25px;
-				font-weight: 700;
-				font-size: 0.9375rem;
-			}
-		}
-		&--dish:last-child {
-			margin-bottom: 0;
-		}
-	}
-	&__order-button {
-		width: 56%;
-		@include center-content;
-	}
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.75rem;
+  }
+  &__heart {
+    @include center-content;
+    height: 1.75rem;
+    width: 1.75rem;
+    padding-top: 4px;
+    padding-right: 10px;
+    position: relative;
+  }
+  &__element {
+    padding: 15px 0;
+
+    &--title {
+      padding-bottom: 20px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 3px;
+        left: 0px;
+        top: 30px;
+        background-color: #99e2d0;
+      }
+    }
+    &--dish {
+      display: flex;
+      justify-content: space-between;
+      height: 68px;
+      padding: 14px 22px 14px 10px;
+      background-color: #fff;
+      margin-bottom: 14px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      &-text {
+        width: 86%;
+      }
+      &-name {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+      &-ingredients {
+        font-size: 0.9375rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &-price {
+        padding-top: 25px;
+        font-weight: 700;
+        font-size: 0.9375rem;
+      }
+    }
+    &--dish:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__order-button {
+    width: 56%;
+    @include center-content;
+  }
 }

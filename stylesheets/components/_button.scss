@@ -13,4 +13,10 @@
 	mix-blend-mode: normal;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
 	border-radius: 999px;
+	transition: all 0.1s;
+	cursor: pointer;
+	&:hover {
+		background: linear-gradient(324.73deg, #8d3cb6 7.15%, #c94fb4 108.11%);
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+	}
 }
