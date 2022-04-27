@@ -877,19 +877,26 @@ footer p {
   position: relative;
 }
 
-.restaurant .heart-hollow {
+.heart-hollow {
   opacity: 1;
   z-index: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
-.restaurant .heart-hollow:hover + .heart-full {
+.heart-hollow:hover + .heart-full {
   background-position: left;
+}
+
+.heart-hollow:hover {
+  opacity: 0;
 }
 
 .heart-full {
   background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(51%, #8d3cb6), color-stop(108.11%, #ffd7f4)) right;
   background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   background-size: 200%;
   -webkit-transition: 0.5s ease-out;
@@ -968,6 +975,23 @@ main.restaurants__page {
   font-size: 1.75rem;
 }
 
+.menu__heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 1.75rem;
+  width: 1.75rem;
+  padding-top: 4px;
+  padding-right: 10px;
+  position: relative;
+}
+
 .menu__element {
   padding: 15px 0;
 }
@@ -1003,6 +1027,10 @@ main.restaurants__page {
   border-radius: 20px;
 }
 
+.menu__element--dish-text {
+  width: 86%;
+}
+
 .menu__element--dish-name {
   font-weight: 700;
   font-size: 1.125rem;
@@ -1010,6 +1038,9 @@ main.restaurants__page {
 
 .menu__element--dish-ingredients {
   font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menu__element--dish-price {
@@ -1033,5 +1064,13 @@ main.restaurants__page {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.menu.thirteen_dishes {
+  height: 1278px;
+}
+
+main.restaurants__page.thirteen_dishes {
+  height: 1502px;
 }
 /*# sourceMappingURL=main.css.map */
