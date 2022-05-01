@@ -962,7 +962,7 @@ main.restaurants__page {
   position: absolute;
   top: 284px;
   background-color: #f6f6f6;
-  padding: 36px 20px;
+  padding: 36px 12px;
   border-radius: 40px 40px 0px 0px;
 }
 
@@ -1016,28 +1016,34 @@ main.restaurants__page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 68px;
   background-color: #fff;
   margin-bottom: 14px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
-  -webkit-transition-duration: 4s;
-          transition-duration: 4s;
 }
 
 .menu__element--dish-text {
-  width: 80%;
+  width: 82%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   padding: 14px 0 14px 10px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  overflow: hidden;
 }
 
 .menu__element--dish-name {
   font-weight: 700;
   font-size: 1.125rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menu__element--dish-ingredients {
@@ -1048,40 +1054,22 @@ main.restaurants__page {
 }
 
 .menu__element--dish-price {
-  width: 12%;
-  padding-top: 38px;
-  padding-right: 22px;
+  padding: 38px 10px 0 10px;
+  margin-right: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-weight: 700;
   font-size: 0.9375rem;
-}
-
-.menu__element--dish:hover .menu__element--dish-selection {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  left: 0%;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.menu__element--dish:hover .menu__element--dish-selection--container {
-  left: 0%;
-}
-
-.menu__element--dish .menu__element--dish-selection--container {
-  width: 18%;
-  height: 100%;
-  left: 100%;
-  position: relative;
-  background-color: pink;
-  background-color: #99e2d0;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .menu__element--dish .menu__element--dish-selection {
   width: 18%;
   height: 100%;
-  left: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: -4.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,16 +1079,28 @@ main.restaurants__page {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  -webkit-transform: rotate(-350deg);
-          transform: rotate(-350deg);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  background-color: #99e2d0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .menu__element--dish .menu__element--dish-selection i {
-  color: red;
+  color: #fff;
   font-size: 1.4rem;
+  -webkit-transform: rotate(-350deg);
+          transform: rotate(-350deg);
+  -webkit-transition-duration: 1.1s;
+          transition-duration: 1.1s;
+}
+
+.menu__element--dish:hover .menu__element--dish-selection {
+  margin-right: 0;
+  margin-left: -1rem;
+}
+
+.menu__element--dish:hover i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .menu--dish:last-child {
