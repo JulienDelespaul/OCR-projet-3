@@ -24,10 +24,6 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
-main {
-  display: block;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -488,16 +484,9 @@ html {
           box-sizing: inherit;
 }
 
-/**
- * Basic styles for links
- */
 a {
-  color: #000;
   text-decoration: none;
-}
-
-a:hover, a:active, a:focus {
-  color: #000;
+  color: inherit;
 }
 
 h1 {
@@ -517,83 +506,29 @@ h3 {
   font-weight: 800;
 }
 
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */
-}
-
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
 header {
-  width: 100%;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+header .header__logo {
+  width: 200px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 header h1 {
   font-size: 2rem;
+}
+
+header .header__arrow {
+  position: absolute;
+  top: 16px;
+  left: 20px;
 }
 
 footer {
@@ -618,11 +553,13 @@ footer .footer__icon-and-text {
 }
 
 footer h4,
-footer p {
+footer p,
+footer a {
   padding-bottom: 6px;
 }
 
-footer p {
+footer p,
+footer a {
   font-weight: 200;
 }
 
@@ -633,7 +570,8 @@ footer p {
   color: #fff;
   padding: 14px 18px 10px;
   margin: 40px auto;
-  background: linear-gradient(324.73deg, #af60dc 7.15%, #eb73da 108.11%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(7.15%, #af60dc), color-stop(108.11%, #eb73da));
+  background: linear-gradient(0deg, #af60dc 7.15%, #eb73da 108.11%);
   mix-blend-mode: normal;
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
@@ -644,9 +582,62 @@ footer p {
 }
 
 .button--flashy:hover {
-  background: linear-gradient(324.73deg, #8d3cb6 7.15%, #c94fb4 108.11%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(7.15%, #af76cb), color-stop(108.11%, #f3abe8));
+  background: linear-gradient(0deg, #af76cb 7.15%, #f3abe8 108.11%);
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.heart-hollow {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.heart-hollow:hover + .heart-full {
+  background-position: left;
+}
+
+.heart-hollow:hover {
+  opacity: 0;
+}
+
+.heart-full {
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(51%, #8d3cb6), color-stop(108.11%, #ffd7f4)) right;
+  background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+@-webkit-keyframes dish-loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatey(50px);
+            transform: translatey(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
+
+@keyframes dish-loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatey(50px);
+            transform: translatey(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
 }
 
 .search-form {
@@ -900,47 +891,6 @@ footer p {
   position: relative;
 }
 
-.heart-hollow {
-  opacity: 1;
-  z-index: 1;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-}
-
-.heart-hollow:hover + .heart-full {
-  background-position: left;
-}
-
-.heart-hollow:hover {
-  opacity: 0;
-}
-
-.heart-full {
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(51%, #8d3cb6), color-stop(108.11%, #ffd7f4)) right;
-  background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-size: 200%;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-}
-
-header.restaurants__page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 100px;
-}
-
-main.restaurants__page {
-  height: 1420px;
-}
-
 .menu__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -957,10 +907,8 @@ main.restaurants__page {
 }
 
 .menu {
-  width: 100%;
-  height: 1196px;
-  position: absolute;
-  top: 284px;
+  position: relative;
+  margin-top: -40px;
   background-color: #f6f6f6;
   padding: 36px 12px;
   border-radius: 40px 40px 0px 0px;
@@ -1016,7 +964,8 @@ main.restaurants__page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 68px;
+  opacity: 0;
+  max-width: 100%;
   background-color: #fff;
   margin-bottom: 14px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1026,12 +975,34 @@ main.restaurants__page {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  -webkit-animation: dish-loading 1s ease-out forwards;
+          animation: dish-loading 1s ease-out forwards;
+}
+
+.menu__element--dish:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menu__element--dish:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu__element--dish:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu__element--dish:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .menu__element--dish-text {
-  width: 82%;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 14px 0 14px 10px;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
@@ -1041,9 +1012,7 @@ main.restaurants__page {
 .menu__element--dish-name {
   font-weight: 700;
   font-size: 1.125rem;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .menu__element--dish-ingredients {
@@ -1056,8 +1025,6 @@ main.restaurants__page {
 .menu__element--dish-price {
   padding: 38px 10px 0 10px;
   margin-right: 1rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   font-weight: 700;
   font-size: 0.9375rem;
   -webkit-transition-duration: 1s;
@@ -1065,11 +1032,10 @@ main.restaurants__page {
 }
 
 .menu__element--dish .menu__element--dish-selection {
-  width: 18%;
-  height: 100%;
+  width: 60px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: -4.5rem;
+  margin-right: -4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,13 +1084,5 @@ main.restaurants__page {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.menu.thirteen_dishes {
-  height: 1278px;
-}
-
-main.restaurants__page.thirteen_dishes {
-  height: 1502px;
 }
 /*# sourceMappingURL=main.css.map */

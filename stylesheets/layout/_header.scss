@@ -3,11 +3,21 @@
 // -----------------------------------------------------------------------------
 
 header {
-  width: 100%;
-  height: 60px;
-  @include center-content;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  h1 {
-    font-size: 2rem;
-  }
+	height: 60px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	.header__logo {
+		width: 200px;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	.header__arrow {
+		position: absolute;
+		top: 16px;
+		left: 20px;
+	}
 }

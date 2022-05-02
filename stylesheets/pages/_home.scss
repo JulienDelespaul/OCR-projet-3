@@ -166,23 +166,3 @@
 		}
 	}
 }
-
-.heart-hollow {
-	opacity: 1;
-	z-index: 1;
-	transition: 0.5s ease-out;
-	&:hover + .heart-full {
-		background-position: left;
-	}
-	&:hover {
-		opacity: 0;
-	}
-}
-.heart-full {
-	background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	background-size: 200%;
-	transition: 0.5s ease-out;
-}
