@@ -613,8 +613,8 @@ footer h1 {
 footer .footer__icon-and-text {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 12fr;
-      grid-template-columns: 1fr 12fr;
+  -ms-grid-columns: 28px 12fr;
+      grid-template-columns: 28px 12fr;
 }
 
 footer h4,
@@ -649,6 +649,147 @@ footer p {
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
+<<<<<<< Updated upstream
+=======
+.heart-hollow {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.heart-hollow:hover + .heart-full {
+  background-position: left;
+}
+
+.heart-hollow:hover {
+  opacity: 0;
+}
+
+.heart-full {
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(51%, #8d3cb6), color-stop(108.11%, #ffd7f4)) right;
+  background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+@-webkit-keyframes dish-loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatey(50px);
+            transform: translatey(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
+
+@keyframes dish-loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatey(50px);
+            transform: translatey(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
+
+@-webkit-keyframes vanish {
+  to {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes vanish {
+  to {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+.loading-spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.908);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: vanish 0s ease-in 6.5s;
+          animation: vanish 0s ease-in 6.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes breathe {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.loading-spinner--dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  -webkit-animation: breathe 1000ms 6 alternate;
+          animation: breathe 1000ms 6 alternate;
+  border-radius: 50%;
+}
+
+.loading-spinner--dot:nth-child(1) {
+  background: #9356dc;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.loading-spinner--dot:nth-child(2) {
+  background: #ff79da;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.loading-spinner--dot:nth-child(3) {
+  background: #99e2d0;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+>>>>>>> Stashed changes
 .search-form {
   margin-top: 4px;
   background-color: #eaeaea;

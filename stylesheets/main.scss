@@ -16,7 +16,11 @@
 @import "components/button";
 
 // 6. Page-specific styles
+<<<<<<< Updated upstream
 @import "pages/home", "pages/a_la_francaise", "pages/la_note_enchantée";
 
 // 7. Themes
 @import "themes/default";
+=======
+@import "pages/home", "pages/a_la_francaise";
+>>>>>>> Stashed changes
