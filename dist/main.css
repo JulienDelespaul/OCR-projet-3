@@ -640,6 +640,92 @@ footer a {
   }
 }
 
+@-webkit-keyframes vanish {
+  to {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes vanish {
+  to {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+.loading-spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.908);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: vanish 0s ease-in 6.6s;
+          animation: vanish 0s ease-in 6.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes breathe {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.loading-spinner--dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  -webkit-animation: breathe 1000ms 6 alternate;
+          animation: breathe 1000ms 6 alternate;
+  border-radius: 50%;
+}
+
+.loading-spinner--dot:nth-child(1) {
+  background: #9356dc;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.loading-spinner--dot:nth-child(2) {
+  background: #ff79da;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.loading-spinner--dot:nth-child(3) {
+  background: #99e2d0;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
 .search-form {
   margin-top: 4px;
   background-color: #eaeaea;
@@ -979,22 +1065,22 @@ footer a {
           animation: dish-loading 1s ease-out forwards;
 }
 
-.menu__element--dish:nth-child(1) {
+.menu__element--dish:nth-child(2) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-.menu__element--dish:nth-child(2) {
+.menu__element--dish:nth-child(3) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.menu__element--dish:nth-child(3) {
+.menu__element--dish:nth-child(4) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.menu__element--dish:nth-child(4) {
+.menu__element--dish:nth-child(5) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }

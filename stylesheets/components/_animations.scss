@@ -32,3 +32,54 @@
 		transform: translatey(0);
 	}
 }
+// loading spinner
+
+@keyframes vanish {
+	to {
+		visibility: hidden;
+		transform: scale(0);
+	}
+}
+
+.loading-spinner {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.908);
+	z-index: 2;
+	@include center-content;
+	animation: vanish 0s ease-in 6.6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes breathe {
+	0% {
+		scale: 0;
+		opacity: 0;
+	}
+
+	100% {
+		scale: 1;
+		opacity: 1;
+	}
+}
+
+.loading-spinner--dot {
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	animation: breathe 1000ms 6 alternate;
+	border-radius: 50%;
+	&:nth-child(1) {
+		background: $primary-color;
+		animation-delay: 100ms;
+	}
+	&:nth-child(2) {
+		background: $secondary-color;
+		animation-delay: 300ms;
+	}
+	&:nth-child(3) {
+		background: $tertiary-color;
+		animation-delay: 500ms;
+	}
+}
