@@ -12,7 +12,7 @@
 	}
 }
 .heart-full {
-	background: linear-gradient(to left, #fff 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
+	background: linear-gradient(to left, #f6f6f6 50%, #8d3cb6 51%, #ffd7f4 108.11%) right;
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
@@ -48,18 +48,18 @@
 	background-color: rgba(255, 255, 255, 0.908);
 	z-index: 2;
 	@include center-content;
-	animation: vanish 0s ease-in 6.6s;
+	animation: vanish 0s ease-in 6.5s;
 	animation-fill-mode: forwards;
 }
 
 @keyframes breathe {
 	0% {
-		scale: 0;
+		transform: scale(0);
 		opacity: 0;
 	}
 
 	100% {
-		scale: 1;
+		transform: scale(1);
 		opacity: 1;
 	}
 }

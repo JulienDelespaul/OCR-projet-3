@@ -8,3 +8,16 @@
 	align-items: center;
 	justify-content: center;
 }
+
+//Breakpoints
+@mixin for-size($size) {
+	@if $size == tablet {
+		@media (min-width: map-get($breakpoints,"medium")) {
+			@content;
+		}
+	} @else if $size == desktop {
+		@media (min-width: map-get($breakpoints, "large")) {
+			@content;
+		}
+	}
+}
