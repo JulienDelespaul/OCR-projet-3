@@ -1,15 +1,17 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
+// ..............
+// center content
+// ..............
 
-// center contents
 @mixin center-content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-//Breakpoints
+// .........
+//breakpoint
+// .........
+
 @mixin for-size($size) {
 	@if $size == tablet {
 		@media (min-width: map-get($breakpoints,"medium")) {

@@ -1,18 +1,12 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
-
 footer {
 	background: #353535;
 	color: $secondary-text-color;
 	height: 196px;
 	width: 100%;
 	font-size: 1rem;
-	padding: 0 30px;
-	// z-index: 2;
+	padding: 0 26px;
 	h1 {
 		padding: 20px 0;
-		font-size: 1.25rem;
 	}
 	.footer__icon-and-text {
 		display: grid;

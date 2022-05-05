@@ -1,14 +1,15 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+// ......
+// button
+// ......
 
 .button--flashy {
 	width: 220px;
 	height: 50px;
 	font-size: 1rem;
-	color: #fff;
-	padding: 14px 18px 10px;
+	font-weight: 500;
+	color: $secondary-text-color;
 	margin: 40px auto;
+	@include center-content;
 	background: linear-gradient(0deg, #af60dc 7.15%, #eb73da 108.11%);
 	mix-blend-mode: normal;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);

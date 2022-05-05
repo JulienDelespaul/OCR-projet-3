@@ -1,4 +1,6 @@
+// ...............
 // heart animation
+// ...............
 
 .heart-hollow {
 	opacity: 1;
@@ -19,12 +21,12 @@
 	background-size: 200%;
 	transition: 0.5s ease-out;
 }
-
+// ......................
 // dish loading animation
+// ......................
 
 @keyframes dish-loading {
 	0% {
-		opacity: 0;
 		transform: translatey(50px);
 	}
 	100% {
@@ -32,7 +34,10 @@
 		transform: translatey(0);
 	}
 }
-// loading spinner
+
+// .........................
+// loading spinner animation
+// .........................
 
 @keyframes vanish {
 	to {
@@ -48,7 +53,7 @@
 	background-color: rgba(255, 255, 255, 0.908);
 	z-index: 2;
 	@include center-content;
-	animation: vanish 0s ease-in 6.5s;
+	animation: vanish 0s ease-in 3s;
 	animation-fill-mode: forwards;
 }
 
@@ -68,7 +73,7 @@
 	width: 20px;
 	height: 20px;
 	margin-right: 20px;
-	animation: breathe 1000ms 6 alternate;
+	animation: breathe 1000ms 3 alternate;
 	border-radius: 50%;
 	&:nth-child(1) {
 		background: $primary-color;

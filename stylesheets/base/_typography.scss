@@ -1,9 +1,14 @@
-/**
- * Basic typography style for copy text
- */
+// .......................
+// Basic typography styles
+// .......................
+
 body {
 	color: $main-text-color;
 	font: normal 125% / 1.4 "roboto", $text-font-stack;
+}
+
+h1 {
+	font-family: "shrikhand", $text-font-stack;
 }
 
 h3 {

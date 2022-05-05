@@ -7,7 +7,7 @@
 @import "vendors/normalize", "vendors/reset";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography";
+@import "base/base", "base/typography";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer";
@@ -16,4 +16,4 @@
 @import "components/button", "components/animations";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/a_la_francaise";
+@import "pages/index", "pages/restaurant";
