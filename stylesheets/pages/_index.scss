@@ -11,14 +11,15 @@
 	background-color: #eaeaea;
 	height: 42px;
 	@include center-content;
+	justify-content: center;
 	gap: 16px;
 	&__location-icon {
-		width: 30%;
+		width: 110px;
 		display: flex;
 		justify-content: flex-end;
 	}
 	&__input {
-		width: 70%;
+		width: 250px;
 		input {
 			border: none;
 			background-color: #eaeaea;

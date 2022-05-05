@@ -746,11 +746,12 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-content: center;
   gap: 16px;
 }
 
 .search-form__location-icon {
-  width: 30%;
+  width: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,7 +761,7 @@ footer a {
 }
 
 .search-form__input {
-  width: 70%;
+  width: 250px;
 }
 
 .search-form__input input {
