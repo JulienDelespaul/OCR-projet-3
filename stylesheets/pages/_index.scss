@@ -7,7 +7,6 @@
 // ...........
 
 .search-form {
-	margin-top: 4px;
 	background-color: #eaeaea;
 	height: 42px;
 	@include center-content;
@@ -52,6 +51,7 @@
 	}
 	&__subtitle {
 		color: #727272;
+		padding: 0 5%;
 		font-size: 1.125rem;
 		line-height: 21px;
 		padding-top: 16px;
@@ -70,7 +70,7 @@
 		height: 220px;
 		padding: 20px;
 		display: grid;
-		grid-template: 50px 1fr / repeat(3, 1fr);
+		grid-template: 50px 1fr / 1fr 1fr 1fr;
 		column-gap: 20px;
 		&__title {
 			grid-column: 1 / 4;
@@ -139,7 +139,7 @@
 	@include for-size(tablet) {
 		padding: 20px;
 		display: grid;
-		grid-template: 50px 1fr / repeat(2, 1fr);
+		grid-template: 50px 1fr / 1fr 1fr;
 		column-gap: 20px;
 		&__title {
 			grid-column: 1 / 3;
